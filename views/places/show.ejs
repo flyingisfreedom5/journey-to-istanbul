@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+<div>Name: </div>
+<div><%= place.name %></div>
+<div>Where:</div>
+<div><% place.where %></div>
+<div>Restaurants:</div>
+<ul>
+  <%- place.restaurants.map(r =>)
+  `<li>${r.name}</li>`
+  ).join('') %>
+</ul>
+</section>
+<form id="add-each-to-restaurants" action="/places<%= place._id" %>/restaurants" method="POST">
+    <select name="restaurantId">
+        <%- restaurants.map(r =>
+        `<option value="${r._id}">${r.name}</option>`
+        ).join('') %> 
+    </select>
+    <button type="submit">Add to Restaurants</button>
+</form>
+
+
+
+
+
+

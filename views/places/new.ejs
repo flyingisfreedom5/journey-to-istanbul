@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<form id="new-form"  action="/places" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name">
+    <label>Where:</label>
+    <input type="text" name="where">
+    <label>Restaurants:</label>
+    <input type="text" name="restaurants">
+    <label>Information About The Place</label>
+    <input type="text" id="info" name="informationAboutThePlace">
+    <input type="submit" value="Add Place">
+</form>
+
+<%- include('../partials/footer') %>

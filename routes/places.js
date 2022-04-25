@@ -5,8 +5,14 @@ const isLoggedIn = require('../config/auth');
 
 // All routes starts with: /places (because of mounting in server.js)
 
-//Get /places
-router.get('/', placesCtrl.index); 
+//GET /places
+router.get('/', placesCtrl.index);  
+//GET /movies/new (new functionality)
+router.get('/new', placesCtrl.new);
+//GET /places/:id (show functionality)
+router.get('/:id', placesCtrl.show);
+// POST /places (create functionality)
+router.post('/', isLoggedIn, placesCtrl.create);
 
 module.exports = router;
 

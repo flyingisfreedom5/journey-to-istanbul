@@ -1,6 +1,20 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: #69338d;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("../images/0x0.jpg");
+  background-size:cover;
+  background-position: cover;
+  margin: 2rem;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas: 
+    "nav"
+    "main"
 }
 
 a {
@@ -16,4 +30,27 @@ a {
 
 .login img {
   height: 30px;
+}
+
+#new-form {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(2, minmax(auto, 22rem));
+}
+
+#new-form * {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#info {
+  width: 300px;
+  height: 200px;
+}
+
+.index, h3 {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(2, minmax(auto, 30rem));
 }
