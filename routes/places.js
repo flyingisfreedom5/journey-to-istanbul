@@ -1,9 +1,13 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const placesCtrl = require('../controllers/places');
+const isLoggedIn = require('../config/auth');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+// All routes starts with: /places (because of mounting in server.js)
+
+//Get /places
+router.get('/', placesCtrl.index); 
 
 module.exports = router;
+
+

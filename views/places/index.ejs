@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+<h3>List Of Places</h3>
+<table id="list">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Where</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% places.forEach(function(p) { %>
+        <tr>
+          <td><%= p.name %></td>
+          <td><%= p.where %></td>
+          <td><a href="/places/<%= p._id %>">DETAIL</td>
+        </tr> 
+      <% }); %>
+    <t/body>
+    </table>
+
+<%- include('../partials/footer') %>
