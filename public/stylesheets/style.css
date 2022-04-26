@@ -17,9 +17,35 @@ body {
     "main"
 }
 
-a {
-  color: #00B7FF;
+nav {
+  font-weight:bolder;
+  color: #1D9AF2;
+  background-color: #292D3E;
+  border: 1px solid #1D9AF2;
+  border-radius: 4px;
+  padding: 0 15px;
+  cursor: pointer;
+  height:32px;
+  font-size:14px;
+  transition: all 0.2s ease-in-out;
 }
+nav:hover {
+  transform: scale(0.9);;
+}
+
+#list {
+  font-weight:bold;
+  color: #1D9AF2;
+  background-color: #292D3E;
+  border: 1px solid #1D9AF2;
+  border-radius: 4px;
+  padding: 0 15px;
+  cursor: pointer;
+  height:32px;
+  font-size:14px;
+  transition: all 0.2s ease-in-out;
+}
+
 
 .login {
   display: flex;
@@ -54,3 +80,28 @@ a {
   grid-gap: 40px;
   grid-template-columns: repeat(2, minmax(auto, 30rem));
 }
+
+.restaurant-add {
+  color: #1D9AF2;
+  background-color: #292D3E;
+  border: 1px solid #1D9AF2;
+  border-radius: 4px;
+  padding: 15px 18px 30px 15px
+  cursor: pointer;
+  height:32px;
+  font-size:14px;
+  box-shadow: 0 0 4px #999;
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.restaurant-add:hover {
+  background:#47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  color: white;
+  }
+
+.restaurant-add:active{
+  background-color:#292d3e;
+  background-size: 100%;
+  transition: background 0s;
+  }

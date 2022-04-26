@@ -13,6 +13,8 @@ router.get('/new', placesCtrl.new);
 router.get('/:id', placesCtrl.show);
 // POST /places (create functionality)
 router.post('/', isLoggedIn, placesCtrl.create);
+//GET /places/:id (delete functionality)
+router.get('/:id', isLoggedIn, placesCtrl.delete);
 
 module.exports = router;
 

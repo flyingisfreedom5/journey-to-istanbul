@@ -4,18 +4,20 @@
 <div>Name: </div>
 <div><%= place.name %></div>
 <div>Where:</div>
-<div><% place.where %></div>
+<div><%= place.where %></div>
+<div>Information About The Place:</div>
+<div><%= place.information %></div>
 <div>Restaurants:</div>
 <ul>
-  <%- place.restaurants.map(r =>)
-  `<li>${r.name}</li>`
+  <%- place.restaurants.map(r =>
+    `<li>${r.name} ${r.rating}</li>`
   ).join('') %>
 </ul>
 </section>
-<form id="add-each-to-restaurants" action="/places<%= place._id" %>/restaurants" method="POST">
+<form id="add-each-to-restaurants" action="/places/<%= place._id %>/restaurants" method="POST">
     <select name="restaurantId">
         <%- restaurants.map(r =>
-        `<option value="${r._id}">${r.name}</option>`
+        `<option value="${r._id}">${r.name} ${r.rating}</option>`
         ).join('') %> 
     </select>
     <button type="submit">Add to Restaurants</button>

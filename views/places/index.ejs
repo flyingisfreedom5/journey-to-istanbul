@@ -15,6 +15,11 @@
           <td><%= p.name %></td>
           <td><%= p.where %></td>
           <td><a href="/places/<%= p._id %>">DETAIL</td>
+            <td>
+                <form action="/places/<%= p._id %>?_method=DELETE" method="POST">
+                <button type="submit">X</button>
+              </form>
+            </td>
         </tr> 
       <% }); %>
     <t/body>
