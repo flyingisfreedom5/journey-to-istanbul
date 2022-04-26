@@ -16,8 +16,10 @@
           <td><%= p.where %></td>
           <td><a href="/places/<%= p._id %>">DETAIL</td>
             <td>
+                <% if (user && user._id.equals(p.user)) { %>
                 <form action="/places/<%= p._id %>?_method=DELETE" method="POST">
                 <button type="submit">X</button>
+                <% } %>
               </form>
             </td>
         </tr> 
