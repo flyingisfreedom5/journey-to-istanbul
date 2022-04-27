@@ -11,7 +11,7 @@ function update(req, res) {
     function(err, place) {
         const commentSubdoc = place.comments.id(req.params.id);
         if (!commentSubdoc.user.equals(req.user._id)) return res.redirect(`/places/${place._id}`);
-        commentSubdoc.text = req.body.text;
+        commentSubdoc.content = req.body.content;
         place.save(function(err) {
             res.redirect(`/places/${place._id}`);
         });
