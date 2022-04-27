@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #69338d;
+  color: #000000;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 
 nav {
   font-weight:bolder;
-  color: #1D9AF2;
+  color: #ffffff;
   background-color: #292D3E;
   border: 1px solid #1D9AF2;
   border-radius: 4px;
@@ -35,7 +35,7 @@ nav:hover {
 
 #list {
   font-weight:bold;
-  color: #1D9AF2;
+  color: #ffffff;
   background-color: #292D3E;
   border: 1px solid #1D9AF2;
   border-radius: 4px;
@@ -82,14 +82,14 @@ nav:hover {
 }
 
 .restaurant-add {
-  color: #1D9AF2;
+  color: #ffffff;
   background-color: #292D3E;
   border: 1px solid #1D9AF2;
   border-radius: 4px;
   padding: 15px 18px 30px 15px
   cursor: pointer;
-  height:32px;
-  font-size:14px;
+  height: 32px;
+  font-size: 14px;
   box-shadow: 0 0 4px #999;
   background-position: center;
   transition: background 0.8s;

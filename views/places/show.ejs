@@ -23,9 +23,44 @@
     <button type="submit">Add to Restaurants</button>
 </form>
 
+<br><br>
+<h2>Comments</h2>
+<% if (user) { %>
+  <form id="add-comment-form" method="POST" action="/places/<%= place._id %>/comments">
+    <label>Comment:</label>
+    <textarea name="content"></textarea>
+    <input type="submit" value="Add Comment">
+  </form>
+<% } %>
+<% if (place.comments.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Date</th>
+          <th>Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% place.comments.forEach(function(c) { %>
+          <tr>
+            <td class="comment-user"><img alt="avatar" src="<%= c.userAvatar %>"><%= c.userName %></td>
+            <td><%= c.createdAt.toLocaleDateString() %></td>
+            <td><%= c.content %></td>
+            <td>
+              <% if (user && user._id.equals(c.user)) { %>
+                <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                  <button type="submit">X</button>
+                </form>
+              <% } %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h5>No Reviews Yet</h5>
+  <% } %>
 
 
-
-
-
-
+<%- include('../partials/footer') %>
