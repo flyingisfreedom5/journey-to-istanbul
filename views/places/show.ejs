@@ -28,7 +28,7 @@
 <% if (user) { %>
   <form id="add-comment-form" method="POST" action="/places/<%= place._id %>/comments">
     <label>Comment:</label>
-    <textarea name="content"></textarea>
+    <input name="content">
     <input type="submit" value="Add Comment">
   </form>
 <% } %>
@@ -50,9 +50,15 @@
             <td>
               <% if (user && user._id.equals(c.user)) { %>
                 <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                  <button type="submit">X</button>
+                  <button type="submit">Delete Comment</button>
                 </form>
               <% } %>
+              <% if (user && user._id.equals(c.user)) { %>
+                <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
+                    <input name="content" value="<%= c.content %>">
+                    <button type="submit">Update Comment</button>
+                  </form>
+                  <% } %>
             </td>
           </tr>
         <% }); %>
