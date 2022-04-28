@@ -1,15 +1,14 @@
 <App title> Journey To Istanbul
 
 
-Technologies Used: HTML, CSS, JavaScript, Node.js, Express, Mongoose
- 
 
+ 
 # SCREENSHOTS
 
 <img src="public/screenshots/Landing Page.png">
-<img src="screenshots/After Logging.png">
-<img src="screenshots/New Restaurant Page.png">
-<img src="screenshots/New Place Page.png">
+<img src="public/screenshots/AfterLogging.png">
+<img src="public/screenshots/New Restaurant Page.png">
+<img src="public/screenshots/New Place Page.png">
 
 # TECHNOLOGIES USED
 
