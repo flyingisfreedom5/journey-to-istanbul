@@ -15,13 +15,13 @@
 </ul>
 </section>
 <% if (user) { %>
-<form id="add-each-to-restaurants" action="/places/<%= place._id %>/restaurants" method="POST">
-    <select name="restaurantId">
+<form action="/places/<%= place._id %>/restaurants" method="POST">
+    <select id="r-dropdown" name="restaurantId">
         <%- restaurants.map(r =>
         `<option value="${r._id}">${r.name}, ${r.rating}</option>`
         ).join('') %> 
     </select>
-    <button type="submit">Add to Restaurants</button>
+    <button id="r-dropdown" type="submit">Add to Restaurants</button>
     <% } %>
 </form>
 
@@ -29,15 +29,14 @@
 <h2>Comments</h2>
 <% if (user) { %>
   <form id="add-comment-form" method="POST" action="/places/<%= place._id %>/comments">
-    <label>Comment:</label>
-    <input name="content">
-    <input type="submit" value="Add Comment">
+    <input id="c-box"  name="content">
+    <input id="c-button" type="submit" value="Add Comment">
   </form>
 <% } %>
 <% if (place.comments.length) { %>
     <table>
       <thead>
-        <tr>
+        <tr id="c-bar">
           <th>User</th>
           <th>Date</th>
           <th>Comment</th>
@@ -46,21 +45,21 @@
       <tbody>
         <% place.comments.forEach(function(c) { %>
           <tr>
-            <td class="comment-user"><img alt="avatar" src="<%= c.userAvatar %>"><%= c.userName %></td>
-            <td><%= c.createdAt.toLocaleDateString() %></td>
-            <td><%= c.content %></td>
-            <td>
-              <% if (user && user._id.equals(c.user)) { %>
-                <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                  <button type="submit">Delete Comment</button>
-                </form>
-              <% } %>
+            <td class="c-user"><%= c.userName %></td>
+            <td class="c-user"><%= c.createdAt.toLocaleDateString() %></td>
+            <td class="c-user"><%= c.content %></td>
+            <td class="c-crud">
               <% if (user && user._id.equals(c.user)) { %>
                 <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
-                    <input name="content" value="<%= c.content %>">
-                    <button type="submit">Update Comment</button>
+                  <input id="c-updatedelete" name="content" value="<%= c.content %>">
+                  <button class="c-blue" id="c-updatedelete" type="submit">Update Comment</button>
+                </form>
+                <% } %>
+                <% if (user && user._id.equals(c.user)) { %>
+                  <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                    <button class="c-red" id="c-updatedelete" type="submit">Delete Comment</button>
                   </form>
-                  <% } %>
+                <% } %>
             </td>
           </tr>
         <% }); %>

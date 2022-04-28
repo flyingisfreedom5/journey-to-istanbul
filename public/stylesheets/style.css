@@ -1,22 +1,17 @@
-* {
+*{
   box-sizing: border-box;
   font-family: Helvetica;
 }
 
-body {
-  background-image: url("../images/0x0.jpg");
-  background-size:cover;
-  background-position: cover;
-  margin: 2rem;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas: 
-    "nav"
-    "main"
+body{
+  background: url("../images/0x0.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-nav {
+nav{
   font-weight:bolder;
   color: #ffffff;
   background-color: #292D3E;
@@ -33,7 +28,8 @@ nav {
 }
 
 .link-nav{
-  color:rgb(255, 255, 255)
+  color:rgb(255, 255, 255);
+  align-self: center;
 }
 
 .link-nav:hover {
@@ -131,7 +127,7 @@ nav {
   background-color:#292D3E;
   text-align: center;
   align-items: center;
-  margin-left: 900px;
+  margin-left: 875px;
   width: 1000px;
   font-size: 60px;
   border: 1px solid #1D9AF2;
@@ -245,5 +241,95 @@ color: yellow;
   }
 
   #google {
-    height: fit-content;
+    height: 100%;
+    width: 30px
+  }
+
+  .google-container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  #r-dropdown {
+    padding: 6px;
+    font-size: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+  }
+
+  h2{
+    display: inline-block;
+    background-color:#292D3E;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #1D9AF2;
+    border-radius: 4px;
+  }
+
+  #c-box{
+    font-size: 12pt; 
+    height: 55px; 
+    width : 300px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+  }
+
+  #c-button{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+  }
+
+  .c-user{
+  color: black;
+  font-size: 15px;
+  background-color: white;
+  width: 220px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  }
+
+  #c-bar{
+    background-color:#292D3E;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid #1D9AF2;
+    border-radius: 4px;
+  }
+
+  #add-comment-form {
+    margin-bottom: 20px;
+  }
+
+  .c-crud{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    height: 30px;
+    align-items: center;
+    
+  }
+  #c-updatedelete{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+  }
+
+  .c-blue:hover{
+    background-color: blue;
+  }
+
+  .c-red:hover{
+    background-color: red;
   }
