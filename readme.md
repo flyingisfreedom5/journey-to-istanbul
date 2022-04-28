@@ -9,6 +9,7 @@
 <img src="public/screenshots/After Logging.png">
 <img src="public/screenshots/New Restaurant Page.png">
 <img src="public/screenshots/New Place Page.png">
+<img src="public/screenshots/Place Detail Page.png">
 
 # TECHNOLOGIES USED
 
