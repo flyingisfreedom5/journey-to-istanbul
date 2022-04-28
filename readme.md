@@ -6,7 +6,7 @@
 # SCREENSHOTS
 
 <img src="public/screenshots/Landing Page.png">
-<img src="public/screenshots/AfterLogging.png">
+<img src="public/screenshots/After Logging.png">
 <img src="public/screenshots/New Restaurant Page.png">
 <img src="public/screenshots/New Place Page.png">
 
