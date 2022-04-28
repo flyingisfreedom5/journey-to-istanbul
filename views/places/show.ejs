@@ -14,6 +14,7 @@
   ).join('') %>
 </ul>
 </section>
+<% if (user) { %>
 <form id="add-each-to-restaurants" action="/places/<%= place._id %>/restaurants" method="POST">
     <select name="restaurantId">
         <%- restaurants.map(r =>
@@ -21,6 +22,7 @@
         ).join('') %> 
     </select>
     <button type="submit">Add to Restaurants</button>
+    <% } %>
 </form>
 
 <br><br>
