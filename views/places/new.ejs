@@ -2,13 +2,13 @@
 
 <link rel='stylesheet' href='/stylesheets/style.css' />
 <form id="new-form"  action="/places" method="POST">
-    <label>Name:</label>
-    <input type="text" name="name">
-    <label>Where:</label>
+    <label class="p-item">Name:</label>
+    <input  type="text" name="name">
+    <label class="p-item">Where:</label>
     <input type="text" name="where">
-    <label>Information About The Place</label>
+    <label class="p-item">Information About The Place</label>
     <textarea name="information"></textarea>
-    <input type="submit" value="Add Place">
+    <input class="button-p" type="submit" value="Add Place">
 </form>
 
 <%- include('../partials/footer') %>

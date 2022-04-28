@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
-<div class=index>
 <h3>List Of Places</h3>
+<div class=index>
 <table id="list">
     <thead>
       <tr>
@@ -14,11 +14,11 @@
         <tr>
           <td><%= p.name %></td>
           <td><%= p.where %></td>
-          <td><a href="/places/<%= p._id %>">DETAIL</td>
+          <td><a class="link-detail" href="/places/<%= p._id %>">DETAIL</td>
             <td>
                 <% if (user && user._id.equals(p.user)) { %>
                 <form action="/places/<%= p._id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
+                <button class="button-x" type="submit">X</button>
                 <% } %>
               </form>
             </td>

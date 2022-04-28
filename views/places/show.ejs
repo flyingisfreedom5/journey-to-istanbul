@@ -1,16 +1,16 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-<div>Name: </div>
-<div><%= place.name %></div>
-<div>Where:</div>
-<div><%= place.where %></div>
-<div>Information About The Place:</div>
-<div><%= place.information %></div>
-<div>Restaurants:</div>
-<ul>
+<div class="item">Name: </div>
+<div class="description"><%= place.name %></div>
+<div class="item">Where:</div>
+<div class="description"><%= place.where %></div>
+<div class="item">Information About The Place:</div>
+<div class="description"><%= place.information %></div>
+<div class="item">Restaurants:</div>
+<ul class="r-list">
   <%- place.restaurants.map(r =>
-    `<li>${r.name}, ${r.rating}</li>`
+    `<li class="rd-list">${r.name}, ${r.rating}</li>`
   ).join('') %>
 </ul>
 </section>

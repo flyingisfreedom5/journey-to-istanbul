@@ -6,16 +6,16 @@
   </head>
   <body>  
     <nav>
-        <a href="/places" <%- title === 'All Places' ? 'class="active"' : '' %>>ISTANBUL PLACES</a>
+        <a class="link-nav" href="/places" <%- title === 'All Places' ? 'class="active"' : '' %>>ISTANBUL PLACES</a>
         <% if (user) { %>
-          <a href="/restaurants/new"	<%- title === 'New Restaurant ' ? 'class="active"' : '' %>>
+          <a class="link-nav" href="/restaurants/new"	<%- title === 'New Restaurant ' ? 'class="active"' : '' %>>
           NEW RESTAURANT</a>
-          <a href="/places/new" <%- title === 'New Place' ? 'class="active"' : '' %>>NEW PLACE</a>
-          <a href="/logout">LOG OUT</a>
+          <a class="link-nav"  href="/places/new" <%- title === 'New Place' ? 'class="active"' : '' %>>NEW PLACE</a>
+          <a class="link-nav"  href="/logout">LOG OUT</a>
         <% } else { %>
-          <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+          <a class="link-nav"  href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
         <% } %>
       </nav>
       <main>
-    <h2 id="Istanbul">Welcome to Journey To Istanbul</h2>
+    <h1 id="Istanbul">Welcome to Journey to Istanbul</h1>
     
