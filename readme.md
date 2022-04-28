@@ -1,4 +1,4 @@
-<App title>: Journey To Istanbul
+<App title> Journey To Istanbul
 
 
 Technologies Used: HTML, CSS, JavaScript, Node.js, Express, Mongoose
