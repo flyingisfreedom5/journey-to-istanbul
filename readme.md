@@ -20,9 +20,6 @@
 - Express
 - Mongoose
 
-# HOW TO PLAY THE GAME
-
-## GAME RULES
 
 <a href="https://journey-to-istanbul.herokuapp.com/">Visit My App</a>
 
